@@ -21,5 +21,9 @@ test('sanitize', function(t) {
     var html = '<img src="' + png + '">';
     t.equal(sanitize(html),html, 'img data url');
 
+    t.equal(sanitize('<mention uid="11123">foo bar</mention>'), 'foo bar', 'custom tag name');
+    t.equal(sanitize('<mention uid="11123">foo bar</mention>', ['mention']), '<mention>foo bar</mention>', 'allowed custom tag name');
+    t.equal(sanitize('<mention uid="11123">foo bar</mention>', ['mention'], ['uid']), '<mention uid="11123">foo bar</mention>', 'allowed custom tag name');
+
     t.end();
 });

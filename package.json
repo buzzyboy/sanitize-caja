@@ -1,6 +1,6 @@
 {
-  "name": "@mapbox/sanitize-caja",
-  "version": "0.1.4",
+  "name": "seismic-sanitize-caja",
+  "version": "1.0.0",
   "description": "sanitize html using caja and reasonable assumptions",
   "main": "index.js",
   "directories": {
